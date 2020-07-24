@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover; 
+}
+.main{
+    box-sizing: border-box;
+    width: 80%;
+    height: 400px;
+     margin:200px auto auto auto;
+    display: flex;
+    flex-direction: row;
+}
+/*Header of Card*/
+h2{  
+    display: block;
+    width: 80%;
+    border-bottom: 1px solid;
+    color: darkgray;
+    font-weight: bold;
+    margin: 20px  auto auto;
+    text-align: center;
+}
+/* Price*/
+h1{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+}
+h1::after{
+    content: '\0024';
+    font-size: 40px;
+}
+h3{
+    transition: .9s display;
+    display:none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    text-decoration: line-through;
+}
+.card{
+    display: block;
+    transition: all .4s ease-in-out;
+    margin: auto;
+    width: 300px;
+    height: 480px;
+    background-color: white;
+    opacity: .8;
+    border-radius: 10px;
+}
+/* Properties of the first product */
+.card:nth-child(1):hover{
+    background-color: #d6cfcb;
+    color: white;
+}
+.card:nth-child(1):hover button{
+    background-color: white;
+    color: #d6cfcb;
+}
+/* Properties of the second product */
+.card:nth-child(2){
+    flex-grow: .2;
+    opacity: .8;
+}
+.card:nth-child(2):hover{ 
+    opacity: 1;
+    background-color: #7B2CBF;
+    color: white;
+}
+.card:nth-child(n+1):hover h2{ 
+    color: white;
+}
+.card:nth-child(2):hover button{
+    background-color: white;
+    color: #7B2CBF;
+}
+/* Properties of the thirds product */
+.card:nth-child(3):hover{
+    background-color: #ffc145;
+    opacity: 1;
+    color: white;
+}
+.card:nth-child(3):hover button{
+    background-color: white;
+    opacity: 1;
+    color:#ffc145 ;
+}
+.card:hover{
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 0 0 2px 2px  white;
+}
+.card:hover h3{
+    display: block;
+    color: white;
+}
+.card:hover h1{
+    margin-bottom: 0;
+    color: white;
+}
+/* Definitions of products*/
+.card p{
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    border-top: 1px solid;
+    line-height: 45px;
+    width: 80%;
+    text-align: center;
+}
+.card p:nth-child(6){
+    border-bottom: 1px solid;
+}
+/* Buttons*/
+.card button{
+    display: block;
+    margin: auto;
+    margin: 50px auto auto;
+    width: 220px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #b892ff;
+    transition: .4s background-color;
+}
+.card:hover button{
+    margin:30px auto auto;
+}
+.card button:hover{
+    background-color: lightgreen !important;
+    color:black !important;
+}
+
+@media only screen and (max-width: 1200px){
+    .main{
+        flex-direction: column;
+        margin-top: 80px;
+     }
+    .card{
+        margin-top: 20px;
+    }
+    .card button{
+        margin: 40px auto;
+    }
+    .card:hover button{
+        margin:20px auto;
+    }
+}
